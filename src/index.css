@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-900;
+  }
+}
+
+@layer utilities {
+  @keyframes guyana-pulse {
+    0% {
+      box-shadow: 0 0 10px 2px #CE1126;
+    }
+
+    /* Red */
+    20% {
+      box-shadow: 0 0 10px 2px #000000;
+    }
+
+    /* Black */
+    40% {
+      box-shadow: 0 0 10px 2px #FCD116;
+    }
+
+    /* Gold */
+    60% {
+      box-shadow: 0 0 10px 2px #FFFFFF;
+    }
+
+    /* White */
+    80% {
+      box-shadow: 0 0 10px 2px #009E49;
+    }
+
+    /* Green */
+    100% {
+      box-shadow: 0 0 10px 2px #CE1126;
+    }
+
+    /* Red */
+  }
+
+  .focus-within-guyana-pulse:focus-within {
+    animation: guyana-pulse 4s infinite linear;
+    border-color: transparent;
+  }
+}
